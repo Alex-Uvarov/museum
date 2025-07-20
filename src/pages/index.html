@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="ie=edge"
+  >
+  <title>Louvre</title>
+</head>
+<body class="page">
+  <div class="page__wrapper">
+    <header class="header section-dark">
+      <div class="header__container container">
+        <a
+          class="header__logo"
+          href="/"
+        >
+          <img
+            class="header__logo-image"
+            src="<%=require('../images/logo.svg')%>"
+            alt="Логотип"
+            width="49"
+            height="26"
+            loading="lazy"
+          />
+          <span class="header__logo-text">
+            Louvre
+          </span>
+        </a>
+        <nav class="header__menu hidden-mobile hidden-tablet">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link link"
+                href="#visiting"
+                onclick=""
+              >
+                Visiting
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link link"
+                href="#explore"
+              >
+                Explore
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link link"
+                href="#video"
+              >
+                Video
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link link"
+                href="#gallery"
+              >
+                Gallery
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link link"
+                href="#tickets"
+              >
+                Tickets
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link link"
+                href="#contscts"
+              >
+                Contacts
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="button__burger-menu burger-button visible-mobile"
+          type="button"
+          onclick="mobileOverlay.showModal()"
+        >
+          <span class="visually-hidden">Open navigation menu</span>
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="welcome section-dark">
+        <div class="welcome__container container">
+          <div class="welcome__content">
+            <h1 class="welcome__content-title">
+              Welcome<br>to the Louvre
+            </h1>
+            <p class="welcome__content-text">
+              From the castle to the museum
+            </p>
+            <button
+              class="welcome__content-button button button-red hidden-mobile"
+              type="button"
+              onclick="window.open('https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736', '_blank')"
+            >
+              Discover the Louvre
+            </button>
+          </div>
+          <div class="welcome__slider">
+            <div class="welcome__slider-pagination">
+              <div class="welcome__slider-pagination-num">
+                <span class="current-slide">01</span>
+                <span class="separator">|</span>
+                <span class="total-pages">05</span>
+              </div>
+              <div class="welcome__slider-pagination-buttons">
+                <div class="pagination-button pagination-button-active"></div>
+                <div class="pagination-button"></div>
+                <div class="pagination-button"></div>
+                <div class="pagination-button"></div>
+                <div class="pagination-button"></div>
+              </div>
+              <div class="welcome__slider-pagination-arrows">
+                <button
+                  class="arrow arrow-left"
+                  type="button"
+                >
+                </button>
+                <button
+                  class="arrow arrow-right"
+                  type="button"
+                >
+                </button>
+              </div>
+            </div>
+            <div class="welcome__slider-slides">
+              <div class="slide"><img src="<%=require('../images/img1.png')%>" width="1000" alt="Mona Lisa"></div>
+            </div>
+          </div>
+        </div>
+        </section>
+      <section class="visiting section-light" id="visiting">
+        <div class="visiting__container container">
+          <h2 class="visiting__title">Virtual tour</h2>
+          <div class="visiting__list">
+            <a href="https://www.google.com/maps/@48.8606882,2.3356791,3a,90y,328.36h,87.55t/data=!3m7!1e1!3m5!1sAF1QipMZ9YgnArbwEIbTDANeSQYFu9gNqpW_2Sv8FBvY!2e10!3e12!7i4352!8i1815" target="_blank" class="visiting__list-item">
+              <img
+                src="<%=require('../images/royal-palace.jpg')%>"
+                alt="Royal Palace"
+              >
+              <h3 class="visiting__list-item-title">Royal Palace</h3>
+              <p class="visiting__list-item-caption">360° Virtual Tour</p>
+              <p class="visiting__list-item-text">Google Street Panorama View</p>
+            </a>
+            <a href="https://www.google.com/maps/@48.8563254,2.3352706,3a,75y,90t/data=!3m7!1e1!3m5!1sAF1QipNRj_CwP4coDMYdCHj6qHeBeJpI2VxU5BUsOX4F!2e10!3e12!7i11000!8i5500" target="_blank" class="visiting__list-item">
+              <img
+                src="<%=require('../images/denon-wing.jpg')%>"
+                alt="Denon Wing"
+              >
+              <h3 class="visiting__list-item-title">Denon Wing</h3>
+              <p class="visiting__list-item-caption">360° Virtual Tour</p>
+              <p class="visiting__list-item-text">Google Street Panorama View</p>
+            </a>
+            <a href="https://www.google.com/maps/@48.8601723,2.3395439,3a,88.4y,322.04h,84.25t/data=!3m7!1e1!3m5!1sAF1QipNMZGQuEA-pAUvIG_eP_2f3gWTKZEJ6XLVJ-Pgb!2e10!3e12!7i10240!8i5120" target="_blank" class="visiting__list-item">
+              <img
+                src="<%=require('../images/colonnade-perault.jpg')%>"
+                alt="Colonnade Perrault"
+              >
+              <h3 class="visiting__list-item-title">Colonnade Perrault</h3>
+              <p class="visiting__list-item-caption">360° Virtual Tour</p>
+              <p class="visiting__list-item-text">Google Street Panorama View</p>
+            </a>
+            <a href="https://www.google.com/maps/@48.860183,2.3356156,3a,90y,177.69h,95.61t/data=!3m7!1e1!3m5!1sAF1QipP7uFZnTITRe-7AEVAgHAfqiCL-03gvBHcYWgF3!2e10!3e12!7i5472!8i2736" target="_blank" class="visiting__list-item">
+              <img
+                src="<%=require('../images/greek-hall.jpg')%>"
+                alt="Greek hall"
+              >
+              <h3 class="visiting__list-item-title">Greek hall</h3>
+              <p class="visiting__list-item-caption">360° Virtual Tour</p>
+              <p class="visiting__list-item-text">Google Street Panorama View</p>
+            </a>
+            <a href="https://www.google.com/maps/@48.8598788,2.3355157,3a,82.2y,7.53h,94t/data=!3m7!1e1!3m5!1sAF1QipO1wkUUbyzpPjj-OR0mR5etZJT-xl-40XK8rDQ3!2e10!3e12!7i10240!8i5120" target="_blank" class="visiting__list-item">
+              <img
+                src="<%=require('../images/mona-lisa.jpg')%>"
+                alt="Mona Lisa"
+              >
+              <h3 class="visiting__list-item-title">Mona Lisa</h3>
+              <p class="visiting__list-item-caption">360° Virtual Tour</p>
+              <p class="visiting__list-item-text">Google Street Panorama View</p>
+            </a>
+            <a href="https://www.google.com/maps/@48.8563254,2.3352706,3a,90y,21.26h,79.91t/data=!3m7!1e1!3m5!1sAF1QipPpGAowYatVyk3MMGnZAaQkYm2EUk-Dlca06SS5!2e10!3e12!7i11304!8i5652" target="_blank" class="visiting__list-item">
+              <img
+                src="<%=require('../images/night-palace.jpg')%>"
+                alt="Night Palace"
+              >
+              <h3 class="visiting__list-item-title">Night Palace</h3>
+              <p class="visiting__list-item-caption">360° Virtual Tour</p>
+              <p class="visiting__list-item-text">Google Street Panorama View</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="explore section-dark" id="explore">
+        <div class="explore__container container">
+          <div class="explore__content">
+            <h2 class="explore__content-title">Picture explore</h2>
+            <div class="explore__content-text">
+              <p class="explore__content-text-item">
+                Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.
+              </p>
+              <p class="explore__content-text-item">
+                It was cleaned in 1984 to remove a <span class="explore__content-text-item-accent">"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.
+              </p>
+              <p class="explore__content-text-item">
+                The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.
+              </p>
+            </div>
+          </div>
+          <div class="explore__compare">
+            <div class="explore__compare-slider">
+              <span class="explore__compare-slider-circle"></span>
+            </div>
+            <input class="explore__compare-range" type="range" min="0" max="100" value="61">
+            <img
+              class="explore__compare-image-before"
+              src="<%=require('../images/before.jpg')%>"
+              alt=""
+              width="440px"
+              height="700px"
+            >
+            <img
+              class="explore__compare-image-after"
+              src="<%=require('../images/explore.jpg')%>"
+              alt="Explore"
+              width="720px"
+              height="700px"
+            >
+          </div>
+        </div>
+      </section>
+      <section class="video section-light" id="video">
+        <div class="video__container container">
+          <div class="video__header">
+            <h2 class="video__header-title">Video journey</h2>
+            <p class="video__header-text hidden-tablet">
+              Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code
+            </p>
+          </div>
+          <iframe class="video__content" src="https://www.youtube.com/embed/zp1BXPX8jcU?si=rkYLho_BM80iMxdu&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+    <div class="mobile-overlay__body">
+      <ul class="mobile-overlay__list">
+        <li class="mobile-overlay__item">
+          <a
+            class="mobile-overlay__link link"
+            href="#visiting"
+          >
+            Visiting
+          </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a
+            class="mobile-overlay__link link"
+            href="#explore"
+          >
+            Explore
+          </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a
+            class="mobile-overlay__link link"
+            href="#video"
+          >
+            Video
+          </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a
+            class="mobile-overlay__link link"
+            href="#gallery"
+          >
+            Gallery
+          </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a
+            class="mobile-overlay__link link"
+            href="#tickets"
+          >
+            Tickets
+          </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a
+            class="mobile-overlay__link link"
+            href="#contscts"
+          >
+            Contacts
+          </a>
+        </li>
+      </ul>
+    </div>
+  </dialog>
+</body>
+</html>

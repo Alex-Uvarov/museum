@@ -1,0 +1,134 @@
+@use "../scss/variables" as *;
+@use "../scss/mixins";
+
+.welcome {
+  padding-block: 0;
+  display: flow-root;
+
+  &__content {
+    @include mixins.desktop {
+      margin-block-start: clamp(50px, #{calc(150 / 1920 * 100)}vw, 150px)
+    }
+    @include mixins.tablet {
+      margin-block-start: clamp(0px, #{calc(50 / 1024 * 100)}vw, 50px);
+    }
+
+    position: absolute;
+    z-index: 10;
+    width: fit-content;
+    &-title {
+      margin-block-end: 25px;
+    }
+    &-text {
+      margin-block-end: 75px;
+      font-weight: 300;
+      @include mixins.fluid-text(28, 24, 20, 16);
+      letter-spacing: 0.07em;
+    }
+    &-button {
+      width: clamp(300px, #{calc(360 / 1920 * 100)}vw, 360px);
+      height: clamp(60px, #{calc(75 / 1920 * 100)}vw, 75px);
+      text-align: center;
+      border-radius: 10px;
+      @include mixins.clamp-for-desktop(22, 20);
+      font-weight: 300;
+      letter-spacing: 0.09em;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    position: relative;
+    float: right;
+    background: linear-gradient(90deg, $color-dark 0%, rgba(0, 0, 0, 0.5) 16%, rgba(0, 0, 0, 0) 30% );
+    padding-block-end: 60px;
+
+    @include mixins.desktop {
+      width: clamp(700px, #{calc(1000 / 1920 * 100)}vw, 1000px);
+    }
+
+    &-pagination {
+      position: absolute;
+      z-index: 10;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      padding: 40px 75px;
+      background-color: black;
+
+      &-buttons {
+        display: flex;
+        gap: 25px;
+        margin-inline: 55px 60px;
+      }
+
+      &-arrows {
+        display: flex;
+        gap: 20px;
+      }
+
+      &-num {
+        display: flex;
+        gap: 10px;
+      }
+    }
+
+    &-slides {
+      display: flex;
+      justify-content: flex-end;
+
+      &::after {
+        content: " ";
+        background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.arrow-right {
+  @include mixins.hover {
+    background-image: url("../images/right-arrow-hover.svg");
+  }
+
+  background-image: url("../images/right-arrow.svg");
+}
+
+.arrow-left {
+  @include mixins.hover {
+    background-image: url("../images/left-arrow-hover.svg");
+  }
+
+  background-image: url("../images/left-arrow.svg");
+}
+
+.arrow {
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: $transition-duration;
+  cursor: pointer;
+}
+
+.pagination-button {
+  @include mixins.hover {
+    background-color: $font-gold;
+  }
+
+  width: 16px;
+  height: 16px;
+  background-color: white;
+}
+
+.pagination-button-active {
+  background-color: $font-gold-light;
+}

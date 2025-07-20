@@ -1,0 +1,54 @@
+@use "../scss/variables" as *;
+@use "../scss/mixins";
+
+.header {
+
+  padding-block-end: 55px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    font-family: $title-font;
+    font-size: 28px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    &-image {
+      @include mixins.mobile {
+        height: 16px;
+        width: 29px;
+      }
+    }
+
+    @include mixins.mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 55px;
+    }
+    &-link {
+      @include mixins.hover {
+        color: $font-gold;
+      }
+
+      display: inline-flex;
+      align-items: center;
+      height: 40px;
+      font-weight: 100;
+      letter-spacing: 2px;
+      scroll-behavior: smooth;
+    }
+  }
+}

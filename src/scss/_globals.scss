@@ -1,0 +1,76 @@
+@use "variables" as *;
+@use "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include mixins.fluid-text(22, 20, 18, 16);
+
+  font-family: $base-font;
+  color: $color-light;
+  background-color: $color-dark;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: $transition-duration;
+  box-shadow: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,h2 {
+  @include mixins.fluid-text(80, 50, 40, 28);
+
+  font-family: $title-font;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 112%;
+  font-weight: 400;
+  margin: 0;
+}
+
+h3 {
+  @include mixins.fluid-text(32, 28, 22, 18);
+
+  font-family: $title-font;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+section {
+  padding-block: 75px;
+}
+
+.button-red {
+  background-color: $dark-red;
+  color: $color-light;
+
+  @include mixins.hover {
+    background-color: $font-gold;
+  }
+}
+
+.section-light {
+  background-color: white;
+  color: black;
+}
+
+.section-dark {
+  background-color: black;
+  color: white;
+}

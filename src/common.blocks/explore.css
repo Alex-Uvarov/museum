@@ -1,0 +1,9 @@
+.explore__container {
+  display: flex;
+  gap: 60px;
+}
+.explore__content-text {
+  display: flex;
+}
+
+/*# sourceMappingURL=explore.css.map */

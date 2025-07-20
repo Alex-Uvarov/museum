@@ -1,0 +1,67 @@
+@use "media" as *;
+
+@mixin clamp-for-desktop($max: 48, $min: 16) {
+  font-size: clamp(#{$min}px, #{calc($max / 1920 * 100)}vw, #{$max}px);
+}
+
+@mixin clamp-for-tablet($max: 48, $min: 16) {
+  font-size: clamp(#{$min}px, #{calc($max / 1024 * 100)}vw, #{$max}px);
+}
+
+@mixin clamp-for-mobile($max: 48, $min: 16) {
+  font-size: clamp(#{$min}px, #{calc($max / 768 * 100)}vw, #{$max}px);
+}
+
+@mixin reset-link {
+  color: inherit;
+
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  aspect-ratio: 1;
+}
+
+@mixin fluid-text ($desktop-max, $desktop-min, $tablet-min, $mobile-min) {
+
+  @include desktop {
+    @include clamp-for-desktop($desktop-max, $desktop-min)
+  }
+
+  @include tablet {
+    @include clamp-for-tablet($desktop-min, $tablet-min)
+  }
+
+  @include mobile {
+    @include clamp-for-mobile($tablet-min, $mobile-min)
+  }
+}

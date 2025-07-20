@@ -1,0 +1,19 @@
+@use "../scss/variables" as *;
+@use "../scss/mixins";
+
+.page__wrapper {
+  @include mixins.desktop {
+    padding-block-start: clamp(49px, #{calc(55 / 1920 * 100)}vw, 55px);
+    padding-block-end: 50px;
+  }
+
+  @include mixins.tablet {
+    padding-block-start: clamp(35px, #{calc(49 / 1024 * 100)}vw, 49px);
+    padding-block-end: clamp(40px, #{calc(50 / 1024 * 100)}vw, 50px);
+  }
+
+  @include mixins.mobile {
+    padding-block-start: 35px;
+    padding-block-end: 40px;
+  }
+}

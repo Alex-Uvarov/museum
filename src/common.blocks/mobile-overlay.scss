@@ -1,0 +1,48 @@
+@use "../scss/variables" as *;
+@use "../scss/mixins";
+
+.mobile-overlay {
+
+  @include mixins.tablet {
+    width: 29%;
+  }
+
+  @include mixins.mobile {
+    width: 100%;
+  }
+
+  height: calc(100vh - 108.4px);
+  align-self: end;
+  border: none;
+  background-color: $color-dark;
+  color: $color-light;
+  font-size: 20px;
+  font-weight: 300;
+  padding-block-start: 26px;
+  padding-inline-start: 55px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  &__link {
+    @include mixins.hover {
+      color: $font-gold;
+      background-image: url("../images/arrowHover.svg");
+    }
+
+    display: inline-flex;
+    align-items: center;
+    height: 41px;
+    width: 122px;
+    letter-spacing: 2px;
+    scroll-behavior: smooth;
+
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+
+  }
+}
